@@ -30,7 +30,7 @@ public class AssignmentController {
             @RequestHeader(value = "X-User-Role", required = false) String role,
             @Valid @RequestBody AssignmentDTO dto) {
 
-        if (role == null || !role.equalsIgnoreCase("TEACHER") && !role.equalsIgnoreCase("TEACHER")) {
+        if (role == null || !role.equalsIgnoreCase("TEACHER") && !role.equalsIgnoreCase("ADMIN")) {
             return ResponseEntity.status(403).build();
         }
 
@@ -75,7 +75,7 @@ public class AssignmentController {
             @PathVariable Long id) {
 
         // Only teacher or admin can delete (simple header-based guard)
-        if (role == null || !(role.equalsIgnoreCase("TEACHER") || role.equalsIgnoreCase("TEACHER") || role.equalsIgnoreCase("ADMIN") || role.equalsIgnoreCase("ADMIN"))) {
+        if (role == null || !(role.equalsIgnoreCase("TEACHER")  || !role.equalsIgnoreCase("ADMIN") )) {
             return ResponseEntity.status(403).build();
         }
 
