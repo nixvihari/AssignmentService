@@ -24,7 +24,7 @@ public class AssignmentServiceImpl implements AssignmentService {
     }
 
     @Override
-    public AssignmentDTO createAssignment(AssignmentDTO dto, Long teacherId) {
+    public AssignmentDTO createAssignment(AssignmentDTO dto, String teacherId) {
         Assignment entity = dtoToEntity(dto);
         entity.setCreatedBy(teacherId);
         Assignment saved = repo.save(entity);

@@ -5,7 +5,7 @@ import com.spark.lms.assignmentservice.entity.Assignment;
 import java.util.List;
 
 public interface AssignmentService {
-    AssignmentDTO createAssignment(AssignmentDTO dto, Long teacherId);
+    AssignmentDTO createAssignment(AssignmentDTO dto, String teacherId);
     AssignmentDTO getAssignment(Long id);
     List<AssignmentDTO> listAssignmentsByCourse(Long courseId);
 

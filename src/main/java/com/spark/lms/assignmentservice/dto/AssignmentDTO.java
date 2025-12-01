@@ -20,7 +20,7 @@ public class AssignmentDTO {
     // use ISO-8601 format from client, e.g. "2025-12-01T23:59:00"
     private LocalDateTime dueDate;
 
-    private Long createdBy;
+    private String createdBy;
 
     public AssignmentDTO() {}
 
@@ -43,6 +43,6 @@ public class AssignmentDTO {
     public LocalDateTime getDueDate() { return dueDate; }
     public void setDueDate(LocalDateTime dueDate) { this.dueDate = dueDate; }
 
-    public Long getCreatedBy() { return createdBy; }
-    public void setCreatedBy(Long createdBy) { this.createdBy = createdBy; }
+    public String getCreatedBy() { return createdBy; }
+    public void setCreatedBy(String createdBy) { this.createdBy = createdBy; }
 }

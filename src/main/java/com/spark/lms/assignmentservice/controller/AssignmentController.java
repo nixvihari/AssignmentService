@@ -26,7 +26,7 @@ public class AssignmentController {
      */
     @PostMapping("/create")
     public ResponseEntity<AssignmentDTO> createAssignment(
-            @RequestHeader(value = "X-User-Id", required = true) Long userId,
+            @RequestHeader(value = "X-User-Id", required = true) String userId,
             @RequestHeader(value = "X-User-Role", required = false) String role,
             @Valid @RequestBody AssignmentDTO dto) {
 
