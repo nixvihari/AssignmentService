@@ -26,7 +26,7 @@ public class Assignment {
 
     private LocalDateTime dueDate;
 
-    private Long createdBy; // teacher userId from header
+    private String createdBy; // teacher userId from header
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
@@ -64,8 +64,8 @@ public class Assignment {
     public LocalDateTime getDueDate() { return dueDate; }
     public void setDueDate(LocalDateTime dueDate) { this.dueDate = dueDate; }
 
-    public Long getCreatedBy() { return createdBy; }
-    public void setCreatedBy(Long createdBy) { this.createdBy = createdBy; }
+    public String getCreatedBy() { return createdBy; }
+    public void setCreatedBy(String createdBy) { this.createdBy = createdBy; }
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
