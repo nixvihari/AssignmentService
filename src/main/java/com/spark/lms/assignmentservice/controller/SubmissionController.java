@@ -64,7 +64,7 @@ public class SubmissionController {
             @RequestHeader(value = "X-User-Role", required = false) String role,
             @PathVariable Long id) {
         // Simple role check: teacher/admin allowed; or you can check ownership.
-        if (role == null || !(role.equalsIgnoreCase("ROLE_TEACHER") || role.equalsIgnoreCase("TEACHER") || role.equalsIgnoreCase("ROLE_ADMIN") || role.equalsIgnoreCase("ADMIN"))) {
+        if (role == null || !(role.equalsIgnoreCase("TEACHER") || role.equalsIgnoreCase("TEACHER") || role.equalsIgnoreCase("ADMIN") || role.equalsIgnoreCase("ADMIN"))) {
             return ResponseEntity.status(403).build();
         }
         svc.deleteSubmissionById(id);
