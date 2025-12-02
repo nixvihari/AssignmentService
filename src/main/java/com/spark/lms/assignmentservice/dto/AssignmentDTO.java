@@ -22,6 +22,10 @@ public class AssignmentDTO {
 
     private String createdBy;
 
+    // ADDED: expose createdAt / updatedAt so mapping between entity <-> dto doesn't fail
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
     public AssignmentDTO() {}
 
     // getters & setters
@@ -45,4 +49,10 @@ public class AssignmentDTO {
 
     public String getCreatedBy() { return createdBy; }
     public void setCreatedBy(String createdBy) { this.createdBy = createdBy; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
 }
