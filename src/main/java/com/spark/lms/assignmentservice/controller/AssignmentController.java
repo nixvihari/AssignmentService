@@ -27,7 +27,7 @@ public class AssignmentController {
     @PostMapping("/create")
     public ResponseEntity<AssignmentDTO> createAssignment(
             @RequestHeader(value = "X-User-Id", required = true) String userId,
-            @RequestHeader(value = "X-User-Role", required = false) String role,
+            @RequestHeader(value = "X-Role", required = false) String role,
             @Valid @RequestBody AssignmentDTO dto) {
 
         if (role == null || !role.equalsIgnoreCase("TEACHER") && !role.equalsIgnoreCase("ADMIN")) {
@@ -71,7 +71,7 @@ public class AssignmentController {
      */
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(
-            @RequestHeader(value = "X-User-Role", required = false) String role,
+            @RequestHeader(value = "X-Role", required = false) String role,
             @PathVariable Long id) {
 
         // Only teacher or admin can delete (simple header-based guard)
